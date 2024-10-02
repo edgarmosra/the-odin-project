@@ -1,0 +1,21 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.calc-container {
+    display: flex;
+    justify-content: center;
+    height: 600px;
+    width: 450px;
+}
+
+.calc-row {
+    border: solid black;
+    flex: 1;
+}
+
+.calc-row div {
+    border: solid black;
+}
