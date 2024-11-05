@@ -1,56 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
-
-    <title>Document</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>todo</title>
+  </head>
+  <body>
     <h1 class="title">todo.</h1>
-    
-
     <div class="main-container">
-        <div class="left-container">
-            <div class="filter-container">
-                <h2>Filters</h2>
-                
-                
-                <ul>
-                    <li class="filter-btn">All</li>
-                    <li class="filter-btn">Starred</li>
-                    <li class="filter-btn">Today</li>
-                    <li class="filter-btn">Week</li>
-                </ul>
-            </div>
-
-
-            <div class="project-container">
-                <h2>Projects</h2>
-                <ul>
-                    <li class="project-btn">Default</li>
-                    <li class="project-btn">Default Two</li>
-                </ul>
-            </div>
-
+      <div class="left-container">
+        <div class="filter-container">
+          <h2>Filters</h2>
+          <ul>
+            <li class="filter-btn show-all-btn">All</li>
+            <li class="filter-btn completed-btn">Completed</li>
+          </ul>
         </div>
-        <div class="right-container">
-            <div class="task-container">
-                <h2>Tasks</h2>
-                <ul class="task-list">
-                    <li class="task">
+        <div class="project-container">
+          <h2>Projects</h2>
+          <ul>
+            <li class="project-btn">Default</li>
+          </ul>
+          
+        </div>
+        <form action="" class="add-project-form">
+          <input type="text" class="add-project-input" placeholder="Input New Project">
+          <button class="add-project-btn">+</button>
+        </form>
+        
+      </div>
+      <div class="right-container">
+        <div class="task-container">
+          <h2>Tasks</h2>
+          <ul class="task-list">
+            <!-- <li class="task">
                         <input type="checkbox" id="task-1" name="task-1">
                         <label for="task-1"> Test Task 1</label>
-                    </li>
-                    
-                </ul>
-            </div>
-
-
-            <div class="add-task-btn">Add Task</div>
+                        <span class="priority-level"></span>
+                        <span class="task-dd">due: 11-11-2002</span>
+                        <span class="delete-task">X</span>
+                        
+                    </li> -->
+          </ul>
         </div>
+
+        <div class="form-container">
+          <form action="" id="task-form" class="add-task-form">
+            <!-- <label for="task-name"><u>Task</u></label> -->
+            <input
+              type="text"
+              id="task-name"
+              name="task-name"
+              placeholder="Input New Task"
+            />
+
+            <!-- <label for="due-date"><u>Due Date</u></label> -->
+            <input type="date" name="due-date" id="due-date"/>
+          </form>
+          <div class="priority-container">
+            <label for="priority">Low:</label>
+            <input
+              type="radio"
+              id="priority"
+              name="priority"
+              value="greenyellow"
+              checked="checked"
+            />
+
+            <label for="priority">Medium:</label>
+            <input type="radio" id="priority" name="priority" value="yellow" />
+
+            <label for="priority">High:</label>
+            <input type="radio" id="priority" name="priority" value="red" />
+          </div>
+
+          <button type="submit" form="task-form" class="add-task-btn">
+            Add Task
+          </button>
+        </div>
+      </div>
     </div>
-</body>
+  </body>
 </html>
